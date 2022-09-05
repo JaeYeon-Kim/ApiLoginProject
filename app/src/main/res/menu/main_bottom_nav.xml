@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/bottom_home_normal"
+        android:title="홈"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/health"
+        android:icon="@drawable/bottom_health_normal"
+        android:title="내 건강"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/bottom_chat_normal"
+        android:title="건강상담"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/diagnosisList"
+        android:icon="@drawable/bottom_list_normal"
+        android:title="진료 내역"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/my"
+        android:icon="@drawable/bottom_my_normal"
+        android:title="내 정보"
+        app:showAsAction="ifRoom" />
+</menu>

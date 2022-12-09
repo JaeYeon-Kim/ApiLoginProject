@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,9 +17,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/home_main_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#00FF0000"
+            android:drawableEnd="@drawable/home_title_arrow"
+            android:text="약 배송 주소 설정"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -229,7 +237,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:background="#00FF0000"
-                                android:drawableTop="@drawable/symptom_icon_1"
+                                android:drawableTop="@drawable/symptom_image_1"
+                                android:drawablePadding="10dp"
                                 android:text="코로나 치료"
                                 android:textStyle="bold" />
 
@@ -237,7 +246,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:background="#00FF0000"
-                                android:drawableTop="@drawable/symptom_icon_2"
+                                android:drawableTop="@drawable/symptom_image_2"
+                                android:drawablePadding="10dp"
                                 android:text="감기"
                                 android:textStyle="bold" />
 
@@ -245,7 +255,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:background="#00FF0000"
-                                android:drawableTop="@drawable/symptom_icon_3"
+                                android:drawableTop="@drawable/symptom_image_3"
+                                android:drawablePadding="10dp"
                                 android:text="여드름/피부염"
                                 android:textStyle="bold" />
 
@@ -253,7 +264,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:background="#00FF0000"
-                                android:drawableTop="@drawable/symptom_icon_4"
+                                android:drawableTop="@drawable/symptom_image_4"
+                                android:drawablePadding="10dp"
                                 android:text="사후피임약"
                                 android:textStyle="bold" />
 
@@ -261,7 +273,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:background="#00FF0000"
-                                android:drawableTop="@drawable/symptom_icon_5"
+                                android:drawableTop="@drawable/symptom_image_5"
+                                android:drawablePadding="10dp"
                                 android:text="다이어트"
                                 android:textStyle="bold" />
 
@@ -270,6 +283,7 @@
                                 android:layout_height="wrap_content"
                                 android:background="#00FF0000"
                                 android:drawableTop="@drawable/symptom_add"
+                                android:drawablePadding="10dp"
                                 android:text="더보기"
                                 android:textStyle="bold" />
 
@@ -285,6 +299,9 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="20dp"
                 app:cardCornerRadius="16dp"
+                app:layout_constraintBottom_toTopOf="@id/home_cv_5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/home_cv_3">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -330,27 +347,74 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:paddingBottom="30dp">
 
                             <androidx.appcompat.widget.AppCompatButton
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:background="#00FF0000"
+                                android:drawableTop="@drawable/subject_icon_1"
+                                android:drawablePadding="10dp"
+                                android:text="피부과"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
 
                             <androidx.appcompat.widget.AppCompatButton
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:background="#00FF0000"
+                                android:drawableTop="@drawable/subject_icon_2"
+                                android:drawablePadding="10dp"
+                                android:text="산부인과"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
 
                             <androidx.appcompat.widget.AppCompatButton
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:background="#00FF0000"
+                                android:drawableTop="@drawable/subject_icon_3"
+                                android:drawablePadding="10dp"
+                                android:text="내과"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
 
                             <androidx.appcompat.widget.AppCompatButton
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:background="#00FF0000"
+                                android:drawableTop="@drawable/subject_icon_4"
+                                android:drawablePadding="10dp"
+                                android:text="소아청소년과"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
 
                             <androidx.appcompat.widget.AppCompatButton
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:background="#00FF0000"
+                                android:drawableTop="@drawable/subject_icon_5"
+                                android:drawablePadding="10dp"
+                                android:text="정신건강의학과"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#00FF0000"
+                                android:drawableTop="@drawable/subject_add"
+                                android:drawablePadding="10dp"
+                                android:text="더보기"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
                         </LinearLayout>
                     </HorizontalScrollView>
 
@@ -366,6 +430,7 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="20dp"
                 app:cardCornerRadius="16dp"
+                app:layout_constraintBottom_toTopOf="@id/home_cv_6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/home_cv_4">
@@ -380,7 +445,9 @@
                         android:layout_height="80dp"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
                         android:src="@drawable/home_corona_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -409,10 +476,211 @@
                         app:layout_constraintTop_toBottomOf="@id/cv_5_mainText" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
             </com.google.android.material.card.MaterialCardView>
 
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/home_cv_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/home_cv_5">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/cv_6_mainText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="건강 꿀팁 배달왔어요"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/cv_6_subText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="전체보기"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/cv_6_mainImage"
+                        android:layout_width="250dp"
+                        android:layout_height="180dp"
+                        android:src="@drawable/home_pill_icon_1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cv_6_mainText" />
+
+                    <TextView
+                        android:id="@+id/cv_6_contentText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="&quot;직장인인데 자도자도 피곤해요&quot; 영양제 조합 팁"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/cv_6_mainImage" />
+
+                    <ImageView
+                        android:id="@+id/cv_6_contentImage"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/home_pill_icon_2"
+                        app:layout_constraintBottom_toBottomOf="@id/cv_6_contentText"
+                        app:layout_constraintStart_toEndOf="@id/cv_6_contentText"
+                        app:layout_constraintTop_toTopOf="@id/cv_6_contentText" />
+
+                    <TextView
+                        android:id="@+id/cv_6_dateText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="2022.09.02"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/cv_6_contentText"
+                        app:layout_constraintTop_toBottomOf="@id/cv_6_contentText" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/home_cv_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/home_cv_6">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/cv_7_mainImage"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/home_delivery"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/cv_7_mainText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="약 받는 방법"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@id/cv_7_mainImage"
+                        app:layout_constraintTop_toTopOf="@id/cv_7_mainImage" />
+
+                    <TextView
+                        android:id="@+id/cv_7_subText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="위치에 따라 배송 방법 확인"
+                        app:layout_constraintStart_toEndOf="@id/cv_7_mainImage"
+                        app:layout_constraintTop_toBottomOf="@id/cv_7_mainText" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/home_ad_viewPager"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/home_cv_7" />
+
+            <LinearLayout
+                android:id="@+id/pager_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/pager_indicator"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                app:layout_constraintBottom_toBottomOf="@id/home_ad_viewPager"
+                app:layout_constraintEnd_toEndOf="@id/home_ad_viewPager">
+
+                <TextView
+                    android:id="@+id/current_page_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pager_symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="/"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/total_page_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="3"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pager_add_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:text="더보기"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

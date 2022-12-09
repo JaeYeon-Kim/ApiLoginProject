@@ -4,13 +4,23 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/home_fast_custom.xml" value="0.135" />
+        <entry key="app/src/main/res/drawable/location_btn_custom.xml" value="0.141" />
+        <entry key="app/src/main/res/drawable/login_kakao.xml" value="0.141" />
+        <entry key="app/src/main/res/drawable/pager_indicator.xml" value="0.152" />
+        <entry key="app/src/main/res/layout/activity_address.xml" value="0.234375" />
+        <entry key="app/src/main/res/layout/activity_kakao_login.xml" value="0.23385416666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2015625" />
+        <entry key="app/src/main/res/layout/activity_near_place.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.215625" />
+        <entry key="app/src/main/res/layout/activity_web_view.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_health.xml" value="0.215625" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.215625" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_list.xml" value="0.215625" />
         <entry key="app/src/main/res/layout/fragment_my.xml" value="0.215625" />
+        <entry key="app/src/main/res/layout/pager_ad_list.xml" value="0.234375" />
+        <entry key="app/src/main/res/layout/place_list.xml" value="0.21510416666666668" />
         <entry key="app/src/main/res/menu/main_bottom_nav.xml" value="0.215625" />
       </map>
     </option>

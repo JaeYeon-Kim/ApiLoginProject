@@ -2,17 +2,59 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kjy.apiloginproject">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
+        android:name=".GlobalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ApiLoginProject">
+        android:theme="@style/Theme.ApiLoginProject"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".WebViewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AddressActivity"
+            android:exported="true" />
+        <activity
+            android:name=".NearPlaceActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="a31336a75b54e73665258f9b87f41c3e" />
+
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".KakaoLoginActivity"
+            android:exported="true" /> <!-- 카카오 로그인 창이 되는 액티비티 추가 -->
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="oauth"
+                    android:scheme="kakaoa31336a75b54e73665258f9b87f41c3e" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".SplashActivity"
-            android:exported="true" >
-
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,9 +63,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

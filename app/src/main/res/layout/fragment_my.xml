@@ -1,14 +1,390 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F7F8F7"
     tools:context=".MyFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="내 정보 화면입니다." />
 
-</FrameLayout>
+    <LinearLayout
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/my_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="마이페이지"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/my_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/my_login_page"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/my_bottom_page"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/my_loginPage_mainText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="로그인을 해주세요"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/my_loginPage_mainArrow"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/my_arrow"
+                    app:layout_constraintStart_toEndOf="@id/my_loginPage_mainText"
+                    app:layout_constraintTop_toTopOf="@id/my_loginPage_mainText" />
+
+                <LinearLayout
+                    android:id="@+id/my_loginPage_btnLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/my_loginPage_mainText">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/my_loginPage_btn_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00FF0000"
+                        android:drawableTop="@drawable/my_icon_1"
+                        android:drawablePadding="10dp"
+                        android:text="프로필 정보"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/my_loginPage_btn_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00FF0000"
+                        android:drawableTop="@drawable/my_icon_2"
+                        android:drawablePadding="10dp"
+                        android:text="주소 관리"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/my_loginPage_btn_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00FF0000"
+                        android:drawableTop="@drawable/my_icon_3"
+                        android:drawablePadding="10dp"
+                        android:text="카드 관리"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/my_loginPage_btn_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#00FF0000"
+                        android:drawableTop="@drawable/my_icon_4"
+                        android:drawablePadding="10dp"
+                        android:text="리뷰 관리"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/my_loginPage_doctor_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/my_login_page_doctor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_loginPage_btnLayout" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/my_bottom_page"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/my_login_page">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/my_question_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@color/white"
+                    android:drawableEnd="@drawable/my_arrow_bold"
+                    android:drawablePadding="240dp"
+                    android:paddingEnd="20dp"
+                    android:text="자주 하는 질문"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/my_bottomLine_1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/my_bottomLine_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F7F8F7"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@id/my_pharmacyList_btn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_question_btn" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/my_pharmacyList_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@color/white"
+                    android:drawableEnd="@drawable/my_arrow_bold"
+                    android:drawablePadding="80dp"
+                    android:paddingEnd="20dp"
+                    android:text="원격(FAX전송) 처방 조제 의무 약국 리스트"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_bottomLine_1" />
+
+                <LinearLayout
+                    android:id="@+id/my_bottomLine_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F7F8F7"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@id/my_family_btn"
+                    app:layout_constraintTop_toBottomOf="@id/my_pharmacyList_btn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/my_family_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@color/white"
+                    android:drawableEnd="@drawable/my_arrow_bold"
+                    android:drawablePadding="210dp"
+                    android:paddingEnd="20dp"
+                    android:text="가족 대리 접수 관리"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/my_bottomLine_3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_bottomLine_2"/>
+
+                <LinearLayout
+                    android:id="@+id/my_bottomLine_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F7F8F7"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@id/my_notice_btn"
+                    app:layout_constraintTop_toBottomOf="@id/my_family_btn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/my_notice_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@color/white"
+                    android:drawableEnd="@drawable/my_arrow_bold"
+                    android:drawablePadding="270dp"
+                    android:paddingEnd="20dp"
+                    android:text="공지사항"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/my_bottomLine_3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <LinearLayout
+                    android:id="@+id/my_bottomLine_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:layout_constraintBottom_toTopOf="@id/my_settings_btn"
+                    app:layout_constraintTop_toBottomOf="@id/my_notice_btn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="#F7F8F7"
+                    android:orientation="vertical"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/my_settings_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@color/white"
+                    android:drawableEnd="@drawable/my_arrow_bold"
+                    android:drawablePadding="270dp"
+                    android:paddingEnd="20dp"
+                    android:text="환경설정"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/my_bottomLine_5"
+                    app:layout_constraintTop_toBottomOf="@id/my_bottomLine_4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <LinearLayout
+                    android:id="@+id/my_bottomLine_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:layout_constraintBottom_toTopOf="@id/my_policy_btn"
+                    app:layout_constraintTop_toBottomOf="@id/my_settings_btn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="#F7F8F7"
+                    android:orientation="vertical"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/my_policy_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@color/white"
+                    android:drawableEnd="@drawable/my_arrow_bold"
+                    android:drawablePadding="250dp"
+                    android:paddingEnd="20dp"
+                    android:text="약관 및 정책"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/my_bottomLine_6"
+                    app:layout_constraintTop_toBottomOf="@id/my_bottomLine_5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <LinearLayout
+                    android:id="@+id/my_bottomLine_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:layout_constraintBottom_toTopOf="@id/my_service_btn"
+                    app:layout_constraintTop_toBottomOf="@id/my_policy_btn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="#F7F8F7"
+                    android:orientation="vertical"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/my_service_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@color/white"
+                    android:drawableEnd="@drawable/my_arrow_bold"
+                    android:drawablePadding="260dp"
+                    android:paddingEnd="20dp"
+                    android:text="서비스문의"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/my_bottomLine_7"
+                    app:layout_constraintTop_toBottomOf="@id/my_bottomLine_6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <LinearLayout
+                    android:id="@+id/my_bottomLine_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:layout_constraintBottom_toTopOf="@id/my_version_btn"
+                    app:layout_constraintTop_toBottomOf="@id/my_service_btn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="#F7F8F7"
+                    android:orientation="vertical"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/my_version_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@color/white"
+                    android:drawableEnd="@drawable/my_arrow_bold"
+                    android:drawablePadding="270dp"
+                    android:paddingEnd="20dp"
+                    android:text="버전정보"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/my_bottomLine_last"
+                    app:layout_constraintTop_toBottomOf="@id/my_bottomLine_7"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <LinearLayout
+                    android:id="@+id/my_bottomLine_last"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_version_btn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="#F7F8F7"
+                    android:orientation="vertical"/>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

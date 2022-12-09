@@ -1,8 +1,15 @@
 package com.kjy.apiloginproject
 
+import android.content.pm.PackageInfo
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Base64
+import android.util.Log
+import com.kakao.sdk.common.util.Utility
 import com.kjy.apiloginproject.databinding.ActivityMainBinding
+import java.security.MessageDigest
+import java.security.NoSuchAlgorithmException
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,6 +25,9 @@ class MainActivity : AppCompatActivity() {
 
         // 프래그먼트 연결
         initBottomNav()
+
+
+
     }
 
     private fun initBottomNav() {
@@ -64,4 +74,5 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
 }
